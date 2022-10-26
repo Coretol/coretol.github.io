@@ -17,6 +17,12 @@ li {
   margin-right: auto;
 }
 
+@media screen and (max-width: 800px) {
+  .content {
+    width: 100vw;
+  }
+}
+
 .tab-group {
   list-style: none;
   display: flex;
@@ -88,4 +94,8 @@ li {
 
 .open .menubar {
   background-image: url("../img/minus.png");
+}
+
+img {
+  width: 100%;
 }

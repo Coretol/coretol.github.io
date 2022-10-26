@@ -11,12 +11,38 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #loading {
+      font-weight: 1000;
+      font-size: xx-large;
+      color: white;
     }
   </style>
 </head>
 
 <body>
+  <p id="loading"></p>
 
+  <script>
+    window.onload = () => {
+      "Loading".split("").forEach((v, i) => {
+        setTimeout(() => {
+          document.getElementById("loading").innerHTML += v;
+        }, 300 * i);
+      });
+
+      setTimeout(() => {
+        setInterval(() => {
+          document.getElementById("loading").innerHTML += ".";
+        }, 1000 * 30);
+      }, 2500);
+    };
+  </script>
 </body>
 
 </html>
