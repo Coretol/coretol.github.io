@@ -106,14 +106,16 @@ img {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  background: rgb(255, 209, 209);
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.notice>h3 {
+.notice.red {
+  background: rgb(255, 209, 209);
+  border-color: red;
   color: red;
 }
